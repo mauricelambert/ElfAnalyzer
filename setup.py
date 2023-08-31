@@ -1,0 +1,56 @@
+from setuptools import setup, find_packages
+import ElfAnalyzer as package
+
+setup(
+    name='ElfAnalyzer',
+    version=package.__version__,
+    py_modules=['ElfAnalyzer'],
+    packages=find_packages(include=[]),
+    install_requires=[],
+    scripts=[],
+    author="Maurice Lambert",
+    author_email="mauricelambert434@gmail.com",
+    maintainer="Maurice Lambert",
+    maintainer_email="mauricelambert434@gmail.com",
+    description='This module parses and analyzes ELF file for Forensic and investigations.',
+    long_description=open('README.md').read(),
+    long_description_content_type="text/markdown",
+    url="https://github.com/mauricelambert/ElfAnalyzer",
+    project_urls={
+        "Github": "https://github.com/mauricelambert/ElfAnalyzer",
+        "Documentation": "https://mauricelambert.github.io/info/python/security/ElfAnalyzer.html",
+        "Python Executable": "https://mauricelambert.github.io/info/python/security/ElfAnalyzer.pyz",
+        "Windows Executable": "https://mauricelambert.github.io/info/python/security/ElfAnalyzer.exe",
+    },
+    download_url="https://mauricelambert.github.io/info/python/security/ElfAnalyzer.pyz",
+    include_package_data=True,
+    classifiers=[
+        "Topic :: System",
+        "Topic :: Security",
+        "Environment :: Console",
+        "Topic :: System :: Shells",
+        'Operating System :: POSIX',
+        "Natural Language :: English",
+        "Topic :: System :: Networking",
+        "Topic :: Internet :: WWW/HTTP",
+        "Programming Language :: Python",
+        "Intended Audience :: Developers",
+        "Topic :: System :: System Shells",
+        'Operating System :: MacOS :: MacOS X',
+        "Programming Language :: Python :: 3.8",
+        'Operating System :: Microsoft :: Windows',
+        "Topic :: System :: Systems Administration",
+        "Development Status :: 5 - Production/Stable",
+        "Intended Audience :: System Administrators",
+        "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    ],
+    keywords=['forensic', 'investigations', 'ELF', 'analysis', 'ELF-parser', 'ELF-analyzer'],
+    platforms=['Windows', 'Linux', "MacOS"],
+    license="GPL-3.0 License",
+    entry_points = {
+        'console_scripts': [
+            'ElfAnalyzer = ElfAnalyzer:main'
+        ],
+    },
+    python_requires='>=3.8',
+)
