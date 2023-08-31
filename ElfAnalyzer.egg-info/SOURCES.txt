@@ -1,0 +1,12 @@
+ElfAnalyzer.py
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+ElfAnalyzer.egg-info/PKG-INFO
+ElfAnalyzer.egg-info/SOURCES.txt
+ElfAnalyzer.egg-info/dependency_links.txt
+ElfAnalyzer.egg-info/entry_points.txt
+ElfAnalyzer.egg-info/top_level.txt

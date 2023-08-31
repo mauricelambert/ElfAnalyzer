@@ -1,0 +1,121 @@
+Metadata-Version: 2.1
+Name: ElfAnalyzer
+Version: 0.0.1
+Summary: This module parses and analyzes ELF file for Forensic and investigations.
+Home-page: https://github.com/mauricelambert/ElfAnalyzer
+Download-URL: https://mauricelambert.github.io/info/python/security/ElfAnalyzer.pyz
+Author: Maurice Lambert
+Author-email: Maurice Lambert <mauricelambert434@gmail.com>
+Maintainer: Maurice Lambert
+Maintainer-email: Maurice Lambert <mauricelambert434@gmail.com>
+License: GPL-3.0 License
+Project-URL: Github, https://github.com/mauricelambert/ElfAnalyzer
+Project-URL: Documentation, https://mauricelambert.github.io/info/python/security/ElfAnalyzer.html
+Project-URL: Python Executable, https://mauricelambert.github.io/info/python/security/ElfAnalyzer.pyz
+Project-URL: Windows Executable, https://mauricelambert.github.io/info/python/security/ElfAnalyzer.exe
+Keywords: forensic,investigations,ELF,analysis,ELF-parser,ELF-analyzer
+Platform: Windows
+Platform: Linux
+Platform: MacOS
+Classifier: Topic :: System
+Classifier: Topic :: Security
+Classifier: Environment :: Console
+Classifier: Topic :: System :: Shells
+Classifier: Operating System :: POSIX
+Classifier: Natural Language :: English
+Classifier: Topic :: System :: Networking
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: System :: System Shells
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Topic :: System :: Systems Administration
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# ElfAnalyzer
+
+## Description
+
+This module parses and analyzes ELF file for Forensic and investigations.
+
+Parses:
+ - ELF identification
+ - ELF headers
+ - Program headers
+ - ELF sections
+ - ELF symbols tables
+ - Comment section
+ - Note sections
+ - Dynamic section
+
+## Requirements
+
+This package require:
+ - python3
+ - python3 Standard Library
+
+### Optional
+
+ - matplotlib
+ - EntropyAnalysis
+
+> *Matplotlib* and *EntropyAnalysis* are not installed by *ProgramExecutableAnalyzer* because this package can be installed on server without GUI.
+> You can install optinal required packages with the following command: `python3 -m pip install matplotlib EntropyAnalysis`
+
+## Installation
+
+```bash
+python3 -m pip install ElfAnalyzer
+```
+
+```bash
+git clone "https://github.com/mauricelambert/ElfAnalyzer.git"
+cd "ElfAnalyzer"
+python3 -m pip install .
+```
+
+## Usages
+
+### Command line
+
+```bash
+ElfAnalyzer              # Using CLI package executable
+python3 -m ElfAnalyzer   # Using python module
+python3 ElfAnalyzer.pyz  # Using python executable
+ElfAnalyzer.exe          # Using python Windows executable
+
+./ElfAnalyzer.pyz ./local/ElfFile
+ElfAnalyzer.exe -u https://github.com/mauricelambert/FastRC4/releases/download/v0.0.1/librc4.so
+./ElfAnalyzer.pyz -v ./local/ElfFile
+python3 ElfAnalyzer.pyz -c ./local/ElfFile
+```
+
+### Python script
+
+```python
+from ElfAnalyzer import *
+
+file = open("./local/ElfFile", "rb")
+elfindent, elf_headers, programs_headers, elf_sections, symbols_tables, comments, note_sections, notes, dynamics, sections = parse_elffile(file)
+cli(elfindent, elf_headers, programs_headers, elf_sections, symbols_tables, comments, notes, dynamics, sections)
+file.close()
+```
+
+## Links
+
+ - [Pypi](https://pypi.org/project/ElfAnalyzer)
+ - [Github](https://github.com/user/ElfAnalyzer)
+ - [Documentation](https://mauricelambert.github.io/info/python/security/ElfAnalyzer.html)
+ - [Python executable](https://mauricelambert.github.io/info/python/security/ElfAnalyzer.pyz)
+ - [Python Windows executable](https://mauricelambert.github.io/info/python/security/ElfAnalyzer.exe)
+
+## License
+
+Licensed under the [GPL, version 3](https://www.gnu.org/licenses/).
