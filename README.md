@@ -20,6 +20,14 @@ This package require:
  - python3
  - python3 Standard Library
 
+### Optional
+
+ - matplotlib
+ - EntropyAnalysis
+
+> *Matplotlib* and *EntropyAnalysis* are not installed by *ProgramExecutableAnalyzer* because this package can be installed on server without GUI.
+> You can install optinal required packages with the following command: `python3 -m pip install matplotlib EntropyAnalysis`
+
 ## Installation
 
 ```bash
