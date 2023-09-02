@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: ElfAnalyzer
-Version: 0.0.1
+Version: 0.0.2
 Summary: This module parses and analyzes ELF file for Forensic and investigations.
 Home-page: https://github.com/mauricelambert/ElfAnalyzer
 Download-URL: https://mauricelambert.github.io/info/python/security/ElfAnalyzer.pyz

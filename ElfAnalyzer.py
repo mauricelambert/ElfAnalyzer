@@ -25,7 +25,7 @@ This module parses and analyzes ELF file for Forensic and
 investigations.
 """
 
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 __author__ = "Maurice Lambert"
 __author_email__ = "mauricelambert434@gmail.com"
 __maintainer__ = "Maurice Lambert"
@@ -1293,7 +1293,6 @@ def main() -> int:
         file.seek(0)
         charts_chunks_file_entropy(
             file,
-            chunk_size=250,
             part_size=round(filesize / 100),
             sections=sections,
         )
